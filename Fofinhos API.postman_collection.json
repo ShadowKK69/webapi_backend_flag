@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "319e6cf8-d80a-431d-93a0-da876bc6ed54",
+		"name": "Fofinhos API",
+		"description": "Backend API for the Fofinhos application to manage drivers and routes.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40343819"
+	},
+	"item": [
+		{
+			"name": "drivers",
+			"item": [
+				{
+					"name": "Get all drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers"
+							]
+						},
+						"description": "Fetch all drivers from database."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single driver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"1"
+							]
+						},
+						"description": "Get single driver by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Get drivers by date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers/date/2024-10-14T23:00:00.000Z",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"date",
+								"2024-10-14T23:00:00.000Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get drivers by vehicle plate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers/plate/102030",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"plate",
+								"102030"
+							]
+						},
+						"description": "Get drivers by vehicle plate number"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers"
+							]
+						},
+						"description": "Add new driver to database."
+					},
+					"response": []
+				},
+				{
+					"name": "Update driver",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Johnny Pistolas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers/675c1daf707340c8b9cd4a53",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"675c1daf707340c8b9cd4a53"
+							]
+						},
+						"description": "Update single driver in database"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/drivers/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"1"
+							]
+						},
+						"description": "Delete driver from database"
+					},
+					"response": []
+				}
+			],
+			"description": "Drivers CRUD functionality"
+		}
+	]
+}
