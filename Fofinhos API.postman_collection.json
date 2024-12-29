@@ -57,7 +57,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/v1/drivers/date/2024-10-14T23:00:00.000Z",
+							"raw": "{{URL}}/api/v1/drivers/date?dateInit=2024-12-01&dateEnd=2024-12-2",
 							"host": [
 								"{{URL}}"
 							],
@@ -65,8 +65,17 @@
 								"api",
 								"v1",
 								"drivers",
-								"date",
-								"2024-10-14T23:00:00.000Z"
+								"date"
+							],
+							"query": [
+								{
+									"key": "dateInit",
+									"value": "2024-12-01"
+								},
+								{
+									"key": "dateEnd",
+									"value": "2024-12-2"
+								}
 							]
 						}
 					},
